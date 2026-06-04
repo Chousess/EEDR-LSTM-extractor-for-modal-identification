@@ -1,0 +1,173 @@
+
+============================================================
+推理开始时间: 2026-05-11 16:25:31
+使用设备: cpu
+============================================================
+
+[1/5] 正在加载数据...
+    数据形状: (10000, 17)
+    数据加载完成，耗时: 0.0245秒
+    处理后数据形状: (10000, 19)
+
+[2/5] 正在创建模型...
+    模型创建完成，耗时: 0.0010秒
+
+模型结构:
+lstmModel(
+  (linear1): Linear(in_features=19, out_features=19, bias=False)
+  (encoder_linear): Linear(in_features=19, out_features=64, bias=True)
+  (lstm): LSTM(64, 64, batch_first=True)
+  (decoder_linear): Linear(in_features=64, out_features=19, bias=True)
+  (linear2): Linear(in_features=19, out_features=19, bias=False)
+)
+
+[3/5] 正在加载预训练模型...
+    模型加载完成，耗时: 0.0020秒
+    模型路径: flat_outputs/lstm_best_model12.pth
+
+[4/5] 正在进行推理...
+    推理完成，耗时: 0.0175秒
+    输出形状: torch.Size([10000, 19])
+
+[5/5] 正在保存结果...
+    结果保存完成，耗时: 0.1116秒
+    输出路径: flat_outputs/lstm_inference_output_current.csv
+
+============================================================
+时间统计:
+  - 数据加载: 0.0245秒
+  - 模型创建: 0.0010秒
+  - 权重加载: 0.0020秒
+  - 推理计算: 0.0175秒 ⏱️
+  - 结果保存: 0.1116秒
+  - 总耗时: 0.1566秒
+============================================================
+
+✓ 推理成功完成!
+  核心推理耗时: 0.0175秒
+
+============================================================
+推理开始时间: 2026-05-12 11:25:04
+使用设备: cpu
+============================================================
+
+[1/5] 正在加载数据...
+    数据形状: (10000, 17)
+    数据加载完成，耗时: 0.0343秒
+    处理后数据形状: (10000, 19)
+
+[2/5] 正在创建模型...
+    模型创建完成，耗时: 0.0220秒
+
+模型结构:
+TransformerModel(
+  (linear1): Linear(in_features=19, out_features=19, bias=False)
+  (embed): Linear(in_features=19, out_features=32, bias=True)
+  (pos_encoder): PositionalEncoding()
+  (transformer_encoder): TransformerEncoder(
+    (layers): ModuleList(
+      (0-2): 3 x TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=32, out_features=32, bias=True)
+        )
+        (linear1): Linear(in_features=32, out_features=2048, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+        (linear2): Linear(in_features=2048, out_features=32, bias=True)
+        (norm1): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+        (norm2): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+        (dropout1): Dropout(p=0.1, inplace=False)
+        (dropout2): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (decoder): Linear(in_features=32, out_features=12, bias=True)
+  (linear2): Linear(in_features=12, out_features=19, bias=False)
+)
+
+[3/5] 正在加载预训练模型...
+    模型加载完成，耗时: 0.0481秒
+    模型路径: flat_outputs/transformer_best_model17.pth
+
+[4/5] 正在进行推理...
+    推理完成，耗时: 0.1315秒
+    输出形状: torch.Size([10000, 12])
+
+[5/5] 正在保存结果...
+    结果保存完成，耗时: 0.0703秒
+    输出路径: flat_outputs/lstm_inference_output_current.csv
+
+============================================================
+时间统计:
+  - 数据加载: 0.0343秒
+  - 模型创建: 0.0220秒
+  - 权重加载: 0.0481秒
+  - 推理计算: 0.1315秒 ⏱️
+  - 结果保存: 0.0703秒
+  - 总耗时: 0.3063秒
+============================================================
+
+✓ 推理成功完成!
+  核心推理耗时: 0.1315秒
+
+============================================================
+推理开始时间: 2026-05-12 15:10:45
+使用设备: cpu
+============================================================
+
+[1/5] 正在加载数据...
+    数据形状: (10000, 17)
+    数据加载完成，耗时: 0.0275秒
+    处理后数据形状: (10000, 19)
+
+[2/5] 正在创建模型...
+    模型创建完成，耗时: 0.0135秒
+
+模型结构:
+TransformerModel(
+  (linear1): Linear(in_features=19, out_features=19, bias=False)
+  (embed): Linear(in_features=19, out_features=32, bias=True)
+  (pos_encoder): PositionalEncoding()
+  (transformer_encoder): TransformerEncoder(
+    (layers): ModuleList(
+      (0-2): 3 x TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=32, out_features=32, bias=True)
+        )
+        (linear1): Linear(in_features=32, out_features=2048, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+        (linear2): Linear(in_features=2048, out_features=32, bias=True)
+        (norm1): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+        (norm2): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+        (dropout1): Dropout(p=0.1, inplace=False)
+        (dropout2): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (decoder): Linear(in_features=32, out_features=12, bias=True)
+  (linear2): Linear(in_features=12, out_features=19, bias=False)
+)
+
+[3/5] 正在加载预训练模型...
+    模型加载完成，耗时: 0.0281秒
+    模型路径: flat_outputs/transformer_best_model17.pth
+
+[4/5] 正在进行推理...
+    推理完成，耗时: 0.1466秒
+    输出形状: torch.Size([10000, 12])
+
+[5/5] 正在保存结果...
+    结果保存完成，耗时: 0.0669秒
+    输出路径: flat_outputs/lstm_inference_output_current.csv
+
+============================================================
+时间统计:
+  - 数据加载: 0.0275秒
+  - 模型创建: 0.0135秒
+  - 权重加载: 0.0281秒
+  - 推理计算: 0.1466秒 ⏱️
+  - 结果保存: 0.0669秒
+  - 总耗时: 0.2826秒
+============================================================
+
+✓ 推理成功完成!
+  核心推理耗时: 0.1466秒

@@ -1,0 +1,42 @@
+## 🎯 TransformerModel 问题快速参考
+
+### 核心问题
+**当在GPU上使用TransformerModel时会发生Device不匹配错误**
+
+### ✅ 解决方案已实施
+
+**文件修改：** `models/transformer_model.py` 行 61-77
+
+**关键改动：**
+```python
+# 修改前（❌ GPU上会报错）
+def regularization_loss(self, weight=1):
+    identity_matrix = torch.eye(cov_matrix.size(0))  # CPU设备
+
+# 修改后（✓ CPU和GPU都可用）
+def regularization_loss(self, weight=1):
+    device = self.x1.device  # 获取模型设备
+    identity_matrix = torch.eye(cov_matrix.size(0), device=device)  # 匹配设备
+```
+
+### 修复的位置 (3处)
+1. Line 66: `torch.eye(..., device=device)`
+2. Line 72: `torch.eye(..., device=device)`  
+3. Line 76: `torch.eye(..., device=device)`
+
+### 验证状态
+- ✅ CPU运行测试通过
+- ✅ 正则化损失计算正常
+- ✅ 与train_flat.py兼容
+
+### 运行测试
+```bash
+python test_transformer_detailed.py
+```
+
+### 非关键警告（可忽略）
+- ⚠️ `enable_nested_tensor` 警告：性能提示，不影响功能
+- ⚠️ 张量转置弃用警告：未来PyTorch版本改进项
+
+---
+**修复完成日期:** 2026-05-11
