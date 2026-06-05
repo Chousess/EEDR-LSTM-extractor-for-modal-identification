@@ -28,11 +28,11 @@ sensorIndex2 = np.array([5, 7, 9, 12, 15]) - 1
 sensorNum = 5
 
 
-fileStr = "truss17_g1.csv"  # 换训练数据时注意改文件名
-modelStr = "gru"
-num = 2
-logStr = "logs\\" + modelStr + "_" + str(num) + "_log.txt"
-myEpoch = 2000
+fileStr = r"D:\\user\\xxh\\研究or项目\\LSTM\\LSTM汇总\\代码\\实验matlab\\spring truss\\truss_17.csv"  # 换训练数据时注意改文件名
+modelStr = "transformer"
+num = 17
+logStr = "truss_logs\\" + modelStr + "_" + str(num) + "_log.txt"
+myEpoch = 1000
 input_dim = 17
 batch_size = 128
 
@@ -166,7 +166,7 @@ def main(modelStr, num):
             min_loss = avg_loss
             torch.save(
                 model.state_dict(),
-                "5outputs/" + modelStr + "_best_model" + str(num) + ".pth",
+                "truss_outputs/" + modelStr + "_best_model" + str(num) + ".pth",
             )
             model = model.to(device)
             ResultString = "epoch:" + str(epoch + 1) + ", minimum loss:" + str(min_loss)

@@ -1,0 +1,95 @@
+D:\\user\\xxh\\研究or项目\\LSTM\\LSTM汇总\\代码\\实验matlab\\spring truss\\truss_17.csv
+TransformerModel(
+  (linear1): Linear(in_features=15, out_features=15, bias=True)
+  (embed): Linear(in_features=15, out_features=32, bias=True)
+  (pos_encoder): PositionalEncoding()
+  (transformer_encoder): TransformerEncoder(
+    (layers): ModuleList(
+      (0-2): 3 x TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=32, out_features=32, bias=True)
+        )
+        (linear1): Linear(in_features=32, out_features=2048, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+        (linear2): Linear(in_features=2048, out_features=32, bias=True)
+        (norm1): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+        (norm2): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+        (dropout1): Dropout(p=0.1, inplace=False)
+        (dropout2): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (decoder): Linear(in_features=32, out_features=15, bias=True)
+  (linear2): Linear(in_features=15, out_features=15, bias=True)
+)
+Epoch 1/1000, Loss: 1.1774861424029628
+Epoch 2/1000, Loss: 1.0279658736684654
+Epoch 3/1000, Loss: 0.9411536543806897
+Epoch 4/1000, Loss: 0.883229851534095
+Epoch 5/1000, Loss: 0.8582717370760592
+Epoch 6/1000, Loss: 0.863197892527037
+Epoch 7/1000, Loss: 0.8171680582852303
+Epoch 8/1000, Loss: 0.8424059959906566
+Epoch 9/1000, Loss: 0.8007849147425422
+Epoch 10/1000, Loss: 0.773248543656325
+Epoch 11/1000, Loss: 0.9410140150332753
+Epoch 12/1000, Loss: 0.7904032976189747
+Epoch 13/1000, Loss: 0.903526524765582
+Epoch 14/1000, Loss: 0.8179490324817126
+Epoch 15/1000, Loss: 0.763259420289269
+Epoch 16/1000, Loss: 0.7906161825868148
+Epoch 17/1000, Loss: 0.7406728584555131
+Epoch 18/1000, Loss: 0.753080743777601
+Epoch 19/1000, Loss: 0.7400938945857785
+Epoch 20/1000, Loss: 0.7686229082225244
+Epoch 21/1000, Loss: 0.7370463903003102
+Epoch 22/1000, Loss: 0.7303166351740873
+Epoch 23/1000, Loss: 0.7514824283462537
+Epoch 24/1000, Loss: 0.7422436913357505
+Epoch 25/1000, Loss: 0.745864703402489
+Epoch 26/1000, Loss: 0.7774932190210004
+Epoch 27/1000, Loss: 0.7786178245574613
+Epoch 28/1000, Loss: 0.7710264559033551
+Epoch 29/1000, Loss: 0.7552055633520778
+Epoch 30/1000, Loss: 0.7625520385896103
+Epoch 31/1000, Loss: 0.8035054578434063
+Epoch 32/1000, Loss: 0.8164524900007851
+Epoch 33/1000, Loss: 0.7697267824713188
+Epoch 34/1000, Loss: 0.7639228277191331
+Epoch 35/1000, Loss: 0.8738733903516697
+Epoch 36/1000, Loss: 0.7824358240335803
+Epoch 37/1000, Loss: 0.7708722441634045
+Epoch 38/1000, Loss: 0.7654937303896192
+Epoch 39/1000, Loss: 0.8048877353909649
+Epoch 40/1000, Loss: 0.7582212478111062
+Epoch 41/1000, Loss: 0.7748269780149942
+Epoch 42/1000, Loss: 0.7834865067955814
+Epoch 43/1000, Loss: 0.820300134488299
+Epoch 44/1000, Loss: 0.7728545309244832
+Epoch 45/1000, Loss: 0.768397459123708
+Epoch 46/1000, Loss: 0.7853470992627023
+Epoch 47/1000, Loss: 0.7767911304401446
+Epoch 48/1000, Loss: 0.7869608489018453
+Epoch 49/1000, Loss: 0.852335664856283
+Epoch 50/1000, Loss: 0.7606613703920871
+Epoch 51/1000, Loss: 0.7854055737770056
+Epoch 52/1000, Loss: 0.7612305511779422
+Epoch 53/1000, Loss: 0.7596511788006071
+Epoch 54/1000, Loss: 0.7907831825410263
+Epoch 55/1000, Loss: 0.7580284911997711
+Epoch 56/1000, Loss: 0.7424033728392818
+Epoch 57/1000, Loss: 0.7633638419682467
+Epoch 58/1000, Loss: 0.769233583932436
+Epoch 59/1000, Loss: 0.746463343501091
+Epoch 60/1000, Loss: 0.7614954117732712
+Epoch 61/1000, Loss: 0.7612121574863603
+Epoch 62/1000, Loss: 0.7649397008781191
+Epoch 63/1000, Loss: 0.764121005240875
+Epoch 64/1000, Loss: 0.7547700459821315
+Epoch 65/1000, Loss: 0.7665421743936176
+Epoch 66/1000, Loss: 0.7827350367096406
+Epoch 67/1000, Loss: 0.7611078987770443
+Epoch 68/1000, Loss: 0.7735982541985149
+Epoch 69/1000, Loss: 0.7849280985095833
+Epoch 70/1000, Loss: 0.7787429775241055
+Epoch 71/1000, Loss: 0.7691614158168624

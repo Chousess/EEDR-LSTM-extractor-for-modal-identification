@@ -1,0 +1,5 @@
+model_type,pth_file,n_runs,avg_ms,min_ms,max_ms,std_ms
+base,base_best_model17.pth,10,0.707,0.386,2.673,0.664
+lstm,lstm_best_model17.pth,10,37.342,30.692,66.262,9.895
+gru,gru_best_model17.pth,10,215.932,196.158,260.358,17.927
+transformer,transformer_best_model17.pth,10,85.214,75.422,123.442,14.667

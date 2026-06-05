@@ -1,0 +1,8 @@
+model_type,pth_file,n_runs,avg_ms,min_ms,max_ms,std_ms
+base,base6.pth,10,1.312,0.341,9.358,2.684
+base,base6.pth,10,0.628,0.304,2.46,0.62
+base,base6.pth,10,0.725,0.277,3.274,0.896
+base,base6.pth,10,0.753,0.308,2.083,0.584
+transformer,transformer6.pth,10,102.233,98.968,115.047,4.563
+gru,gru6.pth,10,180.308,149.92,209.993,21.287
+lstm,lstm6.pth,10,21.517,13.726,42.693,8.263
