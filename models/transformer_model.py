@@ -23,15 +23,15 @@ class TransformerModel(nn.Module):
     ):
         super(TransformerModel, self).__init__()
         self.d_model = d_model
-        self.linear1 = nn.Linear(input_dim, input_dim, bias=False)
+        self.linear1 = nn.Linear(input_dim, input_dim, bias=True)
         self.embed = nn.Linear(input_dim, d_model)
         self.pos_encoder = PositionalEncoding(d_model, max_seq_length)
         encoder_layers = nn.TransformerEncoderLayer(d_model, nhead, dim_feedforward)
         self.transformer_encoder = nn.TransformerEncoder(
             encoder_layers, num_encoder_layers
         )
-        self.decoder = nn.Linear(d_model,12)
-        self.linear2 = nn.Linear(12,input_dim, bias=False)
+        self.decoder = nn.Linear(d_model,input_dim)
+        self.linear2 = nn.Linear(input_dim,input_dim, bias=True)
         self.init_weights()
 
     def init_weights(self):
