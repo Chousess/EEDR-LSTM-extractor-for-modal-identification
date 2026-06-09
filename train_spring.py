@@ -22,11 +22,11 @@ import numpy as np
 import sys
 from reg import *
 
-fileStr = r"D:\\user\\xxh\\研究or项目\\LSTM\\LSTM汇总\\代码\\实验matlab\\spring truss\\spring.csv"  # 换训练数据时注意改文件名
-modelStr = "gru"
+fileStr = r"D:\\user\\xxh\\研究or项目\\LSTM\\LSTM汇总\\代码\\实验matlab\\spring truss\\spring_AIAA.csv"  # 换训练数据时注意改文件名
+modelStr = "lstm"
 num = 6
 logStr = "spring_logs\\" + modelStr + "_" + str(num) + "_log.txt"
-myEpoch = 1000
+myEpoch = 2000
 input_dim = 6
 batch_size = 128
 selected=np.array([1,2,3,5,6])-1
